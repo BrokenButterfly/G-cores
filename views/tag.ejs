@@ -1,0 +1,24 @@
+<%- include header %>
+<div class="info_list">
+    <div class="container">
+        <div class="row">
+            <h1 class="pageHeader"><%= title%></h1>
+            <% posts.forEach(function (post, index) { %>
+            <div class="col-xs-6 col-sm-4 col-md-3">
+                <ul class="part">
+                    <li class="top">
+                        <text class="time"><%= post.time.minute %></text>
+                        <a href="/<%= post.tags %>" class="tags"><text><%= post.tags%></text></a>
+                    </li>
+                    <li class="img"><a href=""><img src='/uploads/<%= post.imgUrl %>' alt="#" onerror="this.src='/images/default.jpg'"></a></li>
+                    <li class="info">
+                        <h2 class="title"><a href="#"><%= post.title %></a></h2>
+                        <div class="content"><%- post.post %></div>
+                    </li>
+                </ul>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+<%- include footer %>

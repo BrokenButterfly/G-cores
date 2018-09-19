@@ -1,0 +1,348 @@
+/*初始化*/
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body, button, input, select, textarea {
+    font: 12px/1.5 tahoma, arial, \5b8b\4f53;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+address, cite, dfn, em, var {
+    font-style: normal;
+}
+
+code, kbd, pre, samp {
+    font-family: couriernew, courier, monospace;
+}
+
+small {
+    font-size: 12px;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+legend {
+    color: #000;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+}
+
+/*header*/
+body {
+    /*width: 100%;*/
+    /*min-width: 1400px;*/
+    /*background-image: url("/images/body_bg.png");*/
+    /*background-size: cover;*/
+}
+body{
+    font-family: 'Open Sans','Helvetica Neue',Arial,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
+    font-size: 14px;
+    line-height: 1.64345;
+    transition: margin-top .7s ease 0s;
+}
+body.body-fixedNavbar {
+    margin-top: 80px;
+}
+img {
+    vertical-align: middle;
+}
+p {
+    margin: 0 0 11.5px;
+}
+.alert_info{
+    position: fixed;
+    z-index: 10000;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #4cae4c;
+    color: #fff;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+}
+.header_nav {
+    background-color: rgba(255,255,255,0.95);
+    min-height: 80px;
+    border-bottom: 1px solid #f0f0f0;
+}
+.navbar-toggle{
+    position: relative;
+    float: right;
+    margin-right: 15px;
+    padding: 9px 10px;
+    margin-top: 23px;
+    margin-bottom: 23px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+.header_nav .navbar-nav a{
+    padding: 30px 30px;
+}
+
+.header_nav .navbar_collapse, .navbar-fixed-bottom .navbar_collapse{
+    max-height: 340px;
+}
+
+.header_nav .icon-bar {
+    background-color: #000000;
+}
+
+.header_nav .navbar-nav a {
+    color: #999;
+}
+.header_nav .navbar-nav:hover li a{
+    background: none;
+}
+.header_nav .navbar-nav li:hover a{
+    color: #269abc;
+}
+
+.index_title {
+    /*border: 1px solid red;*/
+    /*color: #000;*/
+    /*font-size: 16px;*/
+}
+
+/*首页轮播图*/
+
+.focusImgs {
+    position: relative;
+    margin-bottom: 23px;
+    text-align: center;
+    background: #222;
+}
+.focusImgs .swiper-slide{
+    overflow: hidden;
+}
+.focusImgs .swiper-slide a{
+    display: block;
+    width: 300%;
+    height: 100%;
+    position: relative;
+    right: 100%;
+}
+.focusImgs .swiper-slide img{
+    height: 420px;
+    max-height: 100%;
+    width: auto;
+}
+.focusImgs .swiper-container{
+    height: 250px;
+}
+
+
+@media (min-width: 480px){
+    .focusImgs .swiper-container {
+        height: 250px;
+    }
+}
+@media (min-width: 768px){
+    .focusImgs .swiper-container {
+        height: 300px;
+    }
+}
+@media (min-width: 992px){
+    .focusImgs .swiper-container {
+        height: 420px;
+    }
+}
+
+@media (max-width: 767px){
+    .hidden-xs {
+        display: none !important;
+    }
+    .visible-xs-inline-block {
+        display: inline-block !important;
+    }
+}
+@media (max-width: 480px){
+    .col-xs-6{
+        width: 100%;
+    }
+}
+
+/*首页文章列表*/
+.info_list .part{
+
+}
+.info_list .part .top{
+    font-size: 12px;
+    color: #909090;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.info_list .part .top text{
+    color: #686868;
+    font-weight: bold;
+}
+.info_list .part .img{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+.info_list .part .img img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.info_list .part .info{
+    height: 130px;
+    overflow: hidden;
+}
+.info_list .part .info a{
+    color: #888;
+}
+.info_list .part .info .title{
+    position: relative;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #686868;
+    font-weight: bold;
+    max-height: 40px;
+    overflow: hidden;
+    line-height: 20px;
+    padding-left: 15px;
+}
+.info_list .part .info .title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 20px;
+    background: #d9534f;
+}
+.info_list .part .info .content{
+    color: #909090;
+    font-size: 12px;
+    overflow: hidden;
+    max-height: 57px;
+}
+
+
+/*标签分页*/
+.pageHeader{
+    font-size: 18px;
+    line-height: 30px;
+    padding: 8.5px 0;
+    margin: 46px 0 23px;
+    border: 1px solid #f0f0f0;
+    border-left: 0;
+    border-right: 0;
+    color: #808080;
+    font-weight: normal;
+    text-align: right;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+/*底部*/
+.footer {
+    text-align: center;
+    color: #c8c9ca;
+    background: #717071;
+}
+.footer_contact {
+    text-align: center;
+    line-height: 50px;
+    background: #f8f8f8;
+    font-size: 16px;
+    font-weight: bold;
+}
+.footer_info {
+    padding: 0 15px 10px;
+}
+.footer_contact a {
+    color: #aaa;
+    text-decoration: none;
+}
+.footer .footer_top {
+    height: 70px;
+}
+.footer_logos {
+    margin-top: 20px;
+}
+.footer_logos img {
+    height: 22px;
+    margin: 0 20px 10px;
+}
+.footer h4 {
+    font-size: 13px;
+}
+.footer_follow a {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    display: inline-block;
+    background: url("/images/social-icons.png") 0 0 no-repeat;
+}
+.footer_follow a.footer_weibo {
+    background-position: 0 -240px;
+}
+.footer_follow a.footer_weixin {
+    background-position: 0 -300px;
+}
+.footer_follow a.footer_taobao {
+    background-position: 0 -180px;
+}
+.footer_follow a.footer_podcast {
+    background-position: 0 -60px;
+}
+.footer_follow a.footer_rss {
+    background-position: 0 0;
+}
+.toTop {
+    position: fixed;
+    z-index: 5;
+    bottom: 15px;
+    right: 10px;
+}
+.toTop img {
+    width: 40px;
+    height: 40px;
+}

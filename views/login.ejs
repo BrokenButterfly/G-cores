@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+<body>
+
+<article>
+    <% if (success) { %>
+    <div class="alert_info"><%= success %></div>
+    <% } %>
+    <% if (error) { %>
+    <div class="alert_info"><%= error %></div>
+    <% } %>
+    <!--<form method="post">-->
+        <!--用户名：<input type="text" name="name"/><br/>-->
+        <!--密码： <input type="password" name="password"/><br/>-->
+        <!--<input type="submit" value="登录"/>-->
+    <!--</form>-->
+    <div id="app">
+        <div data-reactroot="">
+            <!--<img src="https://static.g-cores.com/assets/52fcb59ad1e09abecec58d39da6731cb.jpg" style="position:absolute;left:-9999px;top:-9999px" alt="gamecore app logo">-->
+            <div class="errorBox">
+                <div></div>
+            </div>
+            <div class="sessionPage">
+                <div class="sessionPage_logo">
+                    <img alt="logo" src="/images/logo.png">
+                </div>
+                <div class="sessionPage_content">
+                    <div>
+                        <form method="post">
+                            <div class="form-group">
+                                <div class=""><input type="text" name="name" value="" placeholder="电话/邮箱/用户名"
+                                                     class="form-control"></div>
+                            </div>
+                            <div class="form-group">
+                                <div class=""><input type="password" name="password" value="" placeholder="密码"
+                                                     class="form-control"></div>
+                            </div>
+                            <div class="form-group"><a tabindex="0" role="button" class="float-right">
+                                <small>找回密码</small>
+                            </a>
+                                <div class="form-check" style="overflow:hidden"><label class="form-check-label"><input
+                                        type="checkbox" name="remember" value="" class="form-check-input">
+                                    <small>记住我</small>
+                                </label></div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-markedness btn-block">登录</button>
+                            </div>
+                            <div class="form-group text-center"><a href="/account/auth" class="text-muted">
+                                <small>使用社交平台帐号登录</small>
+                            </a> <br><a href="/account/signup" class="text-muted">
+                                <small>注册账号</small>
+                            </a> <br></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+</body>
+</html>

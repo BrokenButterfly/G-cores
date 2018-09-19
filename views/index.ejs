@@ -1,0 +1,85 @@
+<%- include header %>
+
+<div class="focusImgs">
+    <div class="swiper-container">
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="">
+                    <img alt="" class="hidden-xs" data-no-retina=""
+                         src="https://alioss.g-cores.com/uploads/focus_image/85c2feeb-c45e-45ab-ae4f-702f0ce0f42f.jpg">
+                    <img alt="" class="visible-xs-inline-block" data-no-retina=""
+                         src="https://alioss.g-cores.com/uploads/focus_image/fcf7e767-adb5-4ae8-8ab9-bce5266dab86.jpg">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <img alt="" class="hidden-xs" data-no-retina=""
+                         src="https://alioss.g-cores.com/uploads/focus_image/4d50fe12-0f58-4589-b67a-b993065c861d.jpg">
+                    <img alt="" class="visible-xs-inline-block" data-no-retina=""
+                         src="https://alioss.g-cores.com/uploads/focus_image/4ec12f6e-dedd-4d52-b299-280f77c3b186.jpg">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <img alt="" class="hidden-xs" data-no-retina=""
+                         src="https://alioss.g-cores.com/uploads/focus_image/74e624ca-1752-488a-ba32-b8a1ee59b02b.jpg">
+                    <img alt="" class="visible-xs-inline-block" data-no-retina=""
+                         src="https://alioss.g-cores.com/uploads/focus_image/302402aa-7feb-4c94-9928-551ca6539990.jpg">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <img alt="" class="hidden-xs" data-no-retina=""
+                         src="https://alioss.g-cores.com/uploads/focus_image/b8eed49e-d9f3-4ed2-93f8-64f5926cb643.jpg">
+                    <img alt="" class="visible-xs-inline-block" data-no-retina=""
+                         src="https://alioss.g-cores.com/uploads/focus_image/c0418ec7-d76f-4395-9eb0-f32075fd9fd3.jpg">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="">
+                    <img alt="" class="hidden-xs" data-no-retina=""
+                         src="https://alioss.g-cores.com/uploads/focus_image/125a7af4-8f85-4820-8529-36af7aeb1b4a.jpg">
+                    <img alt="" class="visible-xs-inline-block" data-no-retina=""
+                         src="https://alioss.g-cores.com/uploads/focus_image/93350871-5e08-42f4-96eb-63dcb528ad48.jpg">
+                </a>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+<div class="info_list">
+    <div class="container">
+        <div class="row">
+            <% posts.forEach(function (post, index) { %>
+            <div class="col-md-4 col-xs-6">
+                <ul class="part">
+                    <li class="top">
+                        <text class="time"><%= post.time.minute %></text>
+                        <a href="/<%= post.tags %>" class="tags"><text><%= post.tags%></text></a>
+                    </li>
+                    <li class="img"><a href="u/<%= post.name %>/<%= post.time.minute %>/<%= post.title %>"><img src='uploads/<%= post.imgUrl %>' alt="#" onerror="this.src='images/default.jpg'"></a></li>
+                    <li class="info">
+                        <h2 class="title"><a href="#"><%= post.title %></a></h2>
+                        <div class="content"><%- post.post %></div>
+                    </li>
+
+                </ul>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+<%- include footer %>

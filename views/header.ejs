@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Blog</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/swiper.min.css">
+    <script src="/javascripts/swiper.js"></script>
+    <script src="/javascripts/js.js"></script>
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+</head>
+<body class="body-fixedNavbar">
+
+<header class="header_nav navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="nav-header">
+            <!--data-* 添加交互-->
+            <!--data-toggle 添加事件
+            data-target 指定事件的目标，在这里是通过id绑定导航栏-->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!--导航条上面不同的选项-->
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a title="主页" href="/">home</a></li>
+                <% if (user) { %>
+                <li><a title="用户中心" href="/user_center">user_center</a></li>
+                <li><a title="发表" href="/post">post</a></li>
+                <li><a title="登出" href="/logout">logout</a></li>
+                <% } else { %>
+                <li><a title="登录" href="/login">login</a></li>
+                <li><a title="注册" href="/reg">register</a></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</header>
+<div class="index_title container">
+    <!--<h3><%= title%></h3>-->
+</div>
+
+<article>
+    <% if (success) { %>
+    <div class="alert_info"><%= success %></div>
+    <% } %>
+    <% if (error) { %>
+    <div class="alert_info"><%= error %></div>
+    <% } %>
