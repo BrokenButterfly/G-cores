@@ -1,203 +1,66 @@
 <%- include header %>
 <div class="wrapper">
-    <div class="story_header" style="background-image: url('https://image.g-cores.com/78b8c87a-422c-4260-aa69-fc24f6f7d682.jpg')">
+    <div class="story_header"
+         style="background-image: url('/uploads/<%= post.imgUrl %>')">
         <div class="story_header_cover"></div>
         <div class="story_header_imgContainer">
             <div class="story_header_imgContainer_img">
-                <img data-no-retina="" alt="玩了4个小时《只狼 影逝二度》，我发现之前遗漏了不少细节" src="https://image.g-cores.com/78b8c87a-422c-4260-aa69-fc24f6f7d682.jpg">
+                <img data-no-retina="" alt="<%= post.title %>"
+                     src="/uploads/<%= post.imgUrl %>"  onerror="this.src='uploads/default.jpg'">
             </div>
         </div>
         <div class="story_header_cover story_header_cover-second"></div>
         <div class="story_header_inner">
             <div class="story_header_text">
                 <h1 class="story_title" id="j_title_preview">
-                    玩了4个小时《只狼 影逝二度》，我发现之前遗漏了不少细节
+                    <%= post.title %>
                 </h1>
                 <p class="story_desc" id="j_desc_preview">
-                    当然了，还有12分钟的试玩录像
+
                 </p>
-                <p class="story_info">2018-09-18 10:00:06</p>
+                <p class="story_info"><%= post.time.minute %></p>
             </div>
         </div>
         <a class="story_user" href="/users/15784">
             <div class="story_user_border">
-                <img src="https://alioss.g-cores.com/uploads/user/55cc8aa9-86bd-4d16-91fc-30c0e8d0e41b_normalat2x.jpg" alt="">
+                <img src="/uploads/<%= post.imgUrl %>" alt="#" onerror="this.src='uploads/default.jpg'">
             </div>
             <p class="story_user_name">
-                小五_Akuma
+                <%= post.name %>
             </p>
-        </a>  <div class="story_consoles">
-        <a class="story_consoles_pc" title="PC" href="https://www.g-cores.com/labels/7/originals">PC</a>
-        <a class="story_consoles_xboxone" title="XBOX ONE" href="https://www.g-cores.com/labels/8/originals">XBOX ONE</a>
-        <a class="story_consoles_ps4" title="PS4" href="https://www.g-cores.com/labels/9/originals">PS4</a>
-    </div>
+        </a>
+        <div class="story_consoles">
+            <a class="story_consoles_pc" title="PC" href="https://www.g-cores.com/labels/7/originals">PC</a>
+            <a class="story_consoles_xboxone" title="XBOX ONE" href="https://www.g-cores.com/labels/8/originals">XBOX
+                ONE</a>
+            <a class="story_consoles_ps4" title="PS4" href="https://www.g-cores.com/labels/9/originals">PS4</a>
+        </div>
     </div>
 
     <div id="j_story_24907" class="story">
         <div class="story_elem story_elem-text ">
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">感谢“方块游戏”提供给机核《只狼：影逝二度(SEKIRO: SHADOWS DIE TWICE)》（以下简称《只狼》）的试玩机会，让我们能够用一整个下午的时间进行充分的体验！虽说在科隆游戏展上我已经排队试玩了两次，回国之后又继续整理 FromSoftware 放出的预告片以及 IGN 的试玩录像，自认为这个试玩版中的内容已经烂熟于胸。没想到的是，我不仅忽略了几个动作系统上的细节，也没发现那个藏在山洞里的可怕敌人。今天借着我们录制的流程视频，再和大家说道说道这个让人无比期待的动作游戏。</p>
-
+            <%- post.post %>
         </div>
-        <div class="story_elem story_elem-text ">
-            <p><em><strong>特别提醒：视频中严重的掉帧现象与试玩的机器有关，可能也因为目前还是试玩版没有进行优化，但我在科隆游戏展期间试玩的版本是完全不掉帧的，所以还请大家不要对视频中的掉帧问题有过多担心，一切以游戏发售后的表现为准。</strong></em><em><strong>另外因为FromSoftware有要求，所以文章配图需要尽可能使用动图。</strong></em></p>
+        <!--<div class="story_elem story_elem-embed j_story_elem" style="">-->
+            <!--<iframe src="https://www.taptap.com/video/60960/embed?thumb=https%3A%2F%2Fimg2.tapimg.com%2Fbbcode%2Fimages%2F0dc863902b44483635d842ae022c4786.png"-->
+                    <!--frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="100%"></iframe>-->
+        <!--</div>-->
+        <!--<div class="story_elem story_elem-text ">-->
+            <!--<p style="margin-left:0cm; margin-right:0cm; text-align:justify">在之前的<a-->
+                    <!--href="https://www.g-cores.com/articles/101976">试玩感受</a>以及<a-->
+                    <!--href="https://www.g-cores.com/articles/101976">预告分析</a>中，有关游戏目前为止展现出来的基本信息已经介绍了很多，这次我想为大家补充一些之前没有意识到、没有提到过的内容。需要说明的是，官方给出的信息十分有限，许多小的细节现阶段只能说是猜测。不过通过试玩的验证，其中大部分还是可以确定的。-->
+            <!--</p>-->
 
-        </div>
-        <div class="story_elem story_elem-embed j_story_elem" style="">
-            <iframe src="https://www.taptap.com/video/60960/embed?thumb=https%3A%2F%2Fimg2.tapimg.com%2Fbbcode%2Fimages%2F0dc863902b44483635d842ae022c4786.png" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="100%"></iframe>
-        </div>
-        <div class="story_elem story_elem-text ">
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">在之前的<a href="https://www.g-cores.com/articles/101976">试玩感受</a>以及<a href="https://www.g-cores.com/articles/101976">预告分析</a>中，有关游戏目前为止展现出来的基本信息已经介绍了很多，这次我想为大家补充一些之前没有意识到、没有提到过的内容。需要说明的是，官方给出的信息十分有限，许多小的细节现阶段只能说是猜测。不过通过试玩的验证，其中大部分还是可以确定的。</p>
-
-        </div>
-        <div class="story_elem story_elem-image ">
-            <a target="_blank" href="https://alioss.g-cores.com/uploads/image/f503a8d7-550e-4d11-a79c-dc2d5ff9c8e1_watermark.png">
-                <img class="j_storyshow_lazyload" data-original="https://alioss.g-cores.com/uploads/image/f503a8d7-550e-4d11-a79c-dc2d5ff9c8e1_watermark.png" src="https://alioss.g-cores.com/uploads/image/f503a8d7-550e-4d11-a79c-dc2d5ff9c8e1_watermark.png" style="display: block;">
-            </a>        </div>
-        <div class="story_elem story_elem-text ">
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">第一次试玩时，我就对跳跃进行过测试，发现跳跃至空中时，按下 X 键会有一个特别明显的伸手动作。许多朋友应该也注意到了这一点，因为这个动作实在太不自然了，很多时候像是被某种强大的引力“吸”过去一样。当时我以为这就是游戏的“二次跳跃”机制，因为确实有很多单凭跳跃无法达到的地方，利用 X 键给出的“吸附”指令就可以上去。不过游戏中可以吸附悬挂的地方都给出了明显的提示，所以就算利用这个方法，一些高点还是无法上去的。</p>
-
-        </div>
-        <div class="story_elem story_elem-image ">
-            <a target="_blank" href="https://alioss.g-cores.com/uploads/image/0781cdb8-31f3-4a8d-8c26-cbce24d9b7fb_watermark.gif">
-                <img class="j_storyshow_lazyload" data-original="https://alioss.g-cores.com/uploads/image/0781cdb8-31f3-4a8d-8c26-cbce24d9b7fb_watermark.gif" src="https://alioss.g-cores.com/uploads/image/0781cdb8-31f3-4a8d-8c26-cbce24d9b7fb_watermark.gif" style="display: block;">
-                <div class="story_caption">
-                    提示很明显
-                </div>
-            </a>        </div>
-        <div class="story_elem story_elem-text ">
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">其实我错了，《只狼》中存在很传统的“二段跳”系统。一开始我没有发现这个动作机制，主要是因为它必须依靠墙面和建筑使用。跳跃腾起至空中后，如果蹬到其他物体，才可以借力再次起跳。不确定之处是，有些情况下这个二段跳动作可以踩在敌人身上，但并不是百分百成功，所以我不是很清楚游戏中是否还有其他相似机制。有了二段跳，对于玩家来说游戏更加灵活，相对的，对地图的纵深设计也提出了更高的要求。因为玩家在考虑进攻路线时不再是只考虑平面路线，钩索与二段跳使得地图更加立体化，许多时候甚至可以绕过敌人去往下一个场景。FromSoftware 是否还能给我们“柳暗花明又一村”的感觉，只能等游戏发售后才知道了。</p>
-
-        </div>
-        <div class="story_elem story_elem-image ">
-            <a target="_blank" href="https://alioss.g-cores.com/uploads/image/472edfb9-2881-4672-8723-3706ef2315fa_watermark.gif">
-                <img class="j_storyshow_lazyload" data-original="https://alioss.g-cores.com/uploads/image/472edfb9-2881-4672-8723-3706ef2315fa_watermark.gif" src="https://alioss.g-cores.com/uploads/image/472edfb9-2881-4672-8723-3706ef2315fa_watermark.gif" style="display: block;">
-                <div class="story_caption">
-                    二段跳
-                </div>
-            </a>        </div>
-        <div class="story_elem story_elem-text ">
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">作为一款强调拼刀的动作游戏，对战部分肯定是游戏的核心，这也是游戏最吸引人的部分。不管是精英敌人还是 Boss，每一次攻击的伤害都很高，无脑硬拼的话显然是很难胜利的。在几次试玩之后，我大致摸清了游戏中应对敌人攻击的三种方法：<strong>防御</strong>、<strong>回避</strong>以及<strong>架招</strong>。</p>
-
-        </div>
-        <div class="story_elem story_elem-image ">
-            <a target="_blank" href="https://alioss.g-cores.com/uploads/image/5da6ccfe-32fc-4d42-91f9-0cabbe53f011_watermark.png">
-                <img class="j_storyshow_lazyload" data-original="https://alioss.g-cores.com/uploads/image/5da6ccfe-32fc-4d42-91f9-0cabbe53f011_watermark.png" src="https://alioss.g-cores.com/uploads/image/5da6ccfe-32fc-4d42-91f9-0cabbe53f011_watermark.png" style="display: block;">
-                <div class="story_caption">
-                    操作方法
-                </div>
-            </a>        </div>
-        <div class="story_elem story_elem-text ">
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">防御是在不了解敌人时，比较保险的方法之一。按住 LB 键，主角会把刀横在头上，摆出防御的姿态。一般来说，防御可以应付大部分情况。但它的缺点也很明显，除了可以避免受伤，它几乎无法带来其他的回报，换句话说，一直防御并不能战胜敌人，或者给敌人造成任何压力，相反自己的处境会越来越不利。首先，防御并不能抵挡所有的攻击。敌人的擒抱攻击无法防御，敌人使出带有“危”字的攻击无法防御，自己的架势槽被打满的时候无法防御。在这些情况下，如果依旧防御的话，就会直接判定受到伤害。</p>
-
-        </div>
-        <div class="story_elem story_elem-image ">
-            <a target="_blank" href="https://alioss.g-cores.com/uploads/image/e73af6af-6644-4676-8b7e-4ff37099439b_watermark.gif">
-                <img class="j_storyshow_lazyload" data-original="https://alioss.g-cores.com/uploads/image/e73af6af-6644-4676-8b7e-4ff37099439b_watermark.gif" src="https://alioss.g-cores.com/uploads/image/e73af6af-6644-4676-8b7e-4ff37099439b_watermark.gif" style="display: block;">
-                <div class="story_caption">
-                    防御重攻击会有很大的硬直
-                </div>
-            </a>        </div>
-        <div class="story_elem story_elem-text ">
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">防御还有另外一个缺点，它也会消耗自己的架势槽。根据敌人攻击强弱的不同，防御时消耗的架势槽也不一样。防御敌人的一些重攻击，会大幅消耗自己的架势槽，并且还有很长的硬直时间。像是试玩中的破戒僧在第三阶段会使出连续五下的大回旋斩，如果选择防御的话基本第三下就会破防。所以在熟悉敌人的动作之后，最好不要以防御来应对进攻。</p>
-
-        </div>
-        <div class="story_elem story_elem-image ">
-            <a target="_blank" href="https://alioss.g-cores.com/uploads/image/6ebcdee5-442f-48a3-8c05-53da303127c0_watermark.jpg">
-                <img class="j_storyshow_lazyload" data-original="https://alioss.g-cores.com/uploads/image/6ebcdee5-442f-48a3-8c05-53da303127c0_watermark.jpg" src="https://alioss.g-cores.com/uploads/image/6ebcdee5-442f-48a3-8c05-53da303127c0_watermark.jpg" style="display: block;">
-            </a>        </div>
-        <div class="story_elem story_elem-text ">
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">《只狼》中的回避，其实也是大有名堂。注意，这里所说的回避不是按住 B 键快速跑，而是按一次 B 键使出的一个快速闪避动作。我原本也以为和其他大多数游戏一样，回避只是能够躲避敌人的攻击，拉开一些距离。但这次的试玩中我意识到，回避有两个妙用：<strong>无敌</strong>和<strong>特殊动作</strong>。无敌比较好理解，就是和《黑暗之魂》一样，回避的过程中有那么几帧的时间是无敌的。面对一些攻击范围比较广的敌人，比如拿着薙刀的破戒僧，近身缠斗时很容易来不及躲开他的一些横扫攻击，又怕被破防，看准时机按下 B 键回避其实也是一个应对措施。值得一提的是，按下&nbsp;A&nbsp;键是跳跃动作，但是应对敌人的下方攻击时，跳跃也可以触发无敌回避动作。当然了，无敌回避的时机也比较苛刻，体感上可能和完美架招差不多，并不是很好掌握。</p>
-
-        </div>
-        <div class="story_elem story_elem-image ">
-            <a target="_blank" href="https://alioss.g-cores.com/uploads/image/c9cfc68a-54e8-4cb2-a005-15a3b110253d_watermark.png">
-                <img class="j_storyshow_lazyload" data-original="https://alioss.g-cores.com/uploads/image/c9cfc68a-54e8-4cb2-a005-15a3b110253d_watermark.png" src="https://alioss.g-cores.com/uploads/image/c9cfc68a-54e8-4cb2-a005-15a3b110253d_watermark.png" style="display: block;">
-            </a>        </div>
-        <div class="story_elem story_elem-text ">
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">另一个回避动作的用法同样不好掌握，就是回避的的特殊版本——识破。在重生读盘的时候，其实就会向玩家介绍看识破这个动作。原理很简单，在敌人进攻的一瞬间，朝着敌人的方向按 B 回避，就能发动识破。这个动作实在太帅了，在其他试玩视频中我们能看到主角有一个把敌人的刀踩在脚下的动作，这就是成功使出了识破。</p>
-
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">除了能化解敌人的攻击，识破还能在完全不消耗自己架势槽的情况，使敌人的架势槽增加不少，有时还能直接触发处决，回报相当高。我自己试下来，成功的概率极低，可能还不熟悉识破的节奏，期待游戏正式发售后各路大佬疯狂秀操作。</p>
-
-        </div>
-        <div class="story_elem story_elem-image ">
-            <a target="_blank" href="https://alioss.g-cores.com/uploads/image/1faba5af-cd51-4518-ad5d-672577789598_watermark.jpg">
-                <img class="j_storyshow_lazyload" data-original="https://alioss.g-cores.com/uploads/image/1faba5af-cd51-4518-ad5d-672577789598_watermark.jpg" src="https://alioss.g-cores.com/uploads/image/1faba5af-cd51-4518-ad5d-672577789598_watermark.jpg" style="display: block;">
-                <div class="story_caption">
-                    识破
-                </div>
-            </a>        </div>
-        <div class="story_elem story_elem-text ">
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">最后再来看一看游戏中最核心的机制——架招格挡。面对敌人的攻击，架招可以说是游戏中最有效的化解手段，可以从各种地方看出 FromSoftware 极为鼓励玩家使用这个系统。可以说除了擒抱（这一点有待验证），架招可以应对一切进攻，包括会破防的那两种情况。敌人使出标有“危”字的攻击时，以及自己架势槽已经涨满发红时，虽然不能防御，但都可以架招。</p>
-
-        </div>
-        <div class="story_elem story_elem-image ">
-            <a target="_blank" href="https://alioss.g-cores.com/uploads/image/ad3e2bc4-e58c-4880-a58a-0737944fbc4f_watermark.gif">
-                <img class="j_storyshow_lazyload" data-original="https://alioss.g-cores.com/uploads/image/ad3e2bc4-e58c-4880-a58a-0737944fbc4f_watermark.gif" src="https://alioss.g-cores.com/uploads/image/ad3e2bc4-e58c-4880-a58a-0737944fbc4f_watermark.gif" style="display: block;">
-                <div class="story_caption">
-                    出现“危”时
-                </div>
-            </a>        </div>
-        <div class="story_elem story_elem-image ">
-            <a target="_blank" href="https://alioss.g-cores.com/uploads/image/4f44912a-e25b-4b43-802a-ff541c9cc5fc_watermark.gif">
-                <img class="j_storyshow_lazyload" data-original="https://alioss.g-cores.com/uploads/image/4f44912a-e25b-4b43-802a-ff541c9cc5fc_watermark.gif" src="https://alioss.g-cores.com/uploads/image/4f44912a-e25b-4b43-802a-ff541c9cc5fc_watermark.gif" style="display: block;">
-                <div class="story_caption">
-                    架势槽已经满了
-                </div>
-            </a>        </div>
-        <div class="story_elem story_elem-text ">
-            <p>这里要注意的是，虽然架招的适用范围很广，判定也不是那么严苛，但这只是对普通架招而言，完美架招对时机的要求非常苛刻，是真正的高风险、高回报。架招与完美架招的区别主要体现在回报上，只有在完美架招的情况下，才不会受到伤害并且架势槽不会增加，否则自己还是要承担一定后果的。如何判断是不是完美架招呢？可以根据拼刀时的演出效果来看，越是接近完美，拼刀时的火花越多，声音也越大，消耗对手的架势槽也越多，打满之后就可以处决。</p>
-
-        </div>
-        <div class="story_elem story_elem-image ">
-            <a target="_blank" href="https://alioss.g-cores.com/uploads/image/883488e5-1981-4434-8dc7-db06507889a5_watermark.gif">
-                <img class="j_storyshow_lazyload" data-original="https://alioss.g-cores.com/uploads/image/883488e5-1981-4434-8dc7-db06507889a5_watermark.gif" src="https://alioss.g-cores.com/uploads/image/883488e5-1981-4434-8dc7-db06507889a5_watermark.gif" style="display: block;">
-                <div class="story_caption">
-                    红点标志着可以处决
-                </div>
-            </a>        </div>
-        <div class="story_elem story_elem-text ">
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">架招是一个必须要会的技能，因为游戏中打空精英敌人与 Boss 的血槽并不能击败他们，必须要通过处决。虽然你也可以通过攻击对手迫使他们来格挡你的进攻，从而消耗他们的架势槽触发处决，但很难说游戏中不会有百分百完美格挡的敌人，你的一切进攻他都能用完美架招应对。这个时候就只能主动格挡他的攻击来使他耗光架势槽了。说起来，设计这样的 Boss 有些刻意为难玩家，但这考虑到这是宫崎英高的游戏，那还真不好说。</p>
-
-        </div>
-        <div class="story_elem story_elem-image ">
-            <a target="_blank" href="https://alioss.g-cores.com/uploads/image/4a839894-09b0-4216-97ff-974b125c341e_watermark.jpg">
-                <img class="j_storyshow_lazyload" data-original="https://alioss.g-cores.com/uploads/image/4a839894-09b0-4216-97ff-974b125c341e_watermark.jpg" src="https://alioss.g-cores.com/uploads/image/4a839894-09b0-4216-97ff-974b125c341e_watermark.jpg" style="display: block;">
-            </a>        </div>
-        <div class="story_elem story_elem-text ">
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">试玩版中，游戏的流程从站在树枝上开始（苇名城&nbsp;城邑），一直到打败破戒僧结束。这次公布的视频给大家展示了试玩的前半段内容，因为山洞里的无头巨人、全身雪白的大蛇以及试玩最后的 Boss 破戒僧目前还不能对外公开影像片段。</p>
-
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">4个小时的试玩之后，我发现游戏的难度其实要比想象中低很多。像是破戒僧，只要了解他的攻击动作，其实很容易就能战胜。我在录像中的打法失误很多，但最后也只花3分钟就结束了Boss战，而且还是在疯狂掉帧的情况下，难度可想而知。</p>
-
-            <p style="margin-left:0cm; margin-right:0cm; text-align:justify">后面这期录像其实也已经制作完成，我可能还会配上一些解说，讲解游戏里的一下细节，包括主角背后那把从来不用的刀也会有一个交代。下期视频预计会在2018东京电玩展期间放出，敬请期待！</p>
-
-        </div>
-        <div class="story_elem story_elem-image ">
-            <a target="_blank" href="https://alioss.g-cores.com/uploads/image/d78da6e3-6eaf-41a1-af48-61706a61b765_watermark.gif">
-                <img class="j_storyshow_lazyload" data-original="https://alioss.g-cores.com/uploads/image/d78da6e3-6eaf-41a1-af48-61706a61b765_watermark.gif" src="https://alioss.g-cores.com/uploads/image/d78da6e3-6eaf-41a1-af48-61706a61b765_watermark.gif" style="display: block;">
-                <div class="story_caption">
-                    破戒僧的亮相太帅了！
-                </div>
-            </a>        </div>
-        <div class="story_elem story_elem-text ">
-            <p>&nbsp;</p>
-
-            <p><strong>相关阅读：</strong></p>
-
-        </div>
-        <div class="story_elem story_elem-text ">
-            <p><a href="https://www.g-cores.com/articles/101313">关于《只狼 影逝二度》，我想说一说现场试玩的感受</a></p>
-
-            <p><a href="https://www.g-cores.com/articles/101976">《只狼 影逝二度》简体中文最新预告片公布，这些细节值得注意</a></p>
-
-            <p><a href="https://www.g-cores.com/articles/101438">《只狼》已知内容详解-战斗/敌人/音效/技术力/语言</a></p>
-
-            <p><a href="https://www.g-cores.com/articles/101293">《只狼》更多实机演示公开，听V大跟你聊聊他的感受</a></p>
-
-            <p><a href="https://www.g-cores.com/articles/99429">《Fami通》宫崎英高访谈总结：《只狼》地图设计与初代《黑暗之魂》很接近</a></p>
-
-        </div>
+        <!--</div>-->
+        <!--<div class="story_elem story_elem-image ">-->
+            <!--<a target="_blank"-->
+               <!--href="https://alioss.g-cores.com/uploads/image/f503a8d7-550e-4d11-a79c-dc2d5ff9c8e1_watermark.png">-->
+                <!--<img class="j_storyshow_lazyload"-->
+                     <!--data-original="https://alioss.g-cores.com/uploads/image/f503a8d7-550e-4d11-a79c-dc2d5ff9c8e1_watermark.png"-->
+                     <!--src="https://alioss.g-cores.com/uploads/image/f503a8d7-550e-4d11-a79c-dc2d5ff9c8e1_watermark.png"-->
+                     <!--style="display: block;">-->
+            <!--</a></div>-->
     </div>
 
 </div>
-
 <%- include footer %>
