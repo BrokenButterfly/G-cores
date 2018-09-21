@@ -1,0 +1,19 @@
+<%- include user_center%>
+
+<div class="aus_container">
+<div class="row">
+    <div class="col-md-offset-2 col-xs-7">
+        <form method="post" enctype='multipart/form-data'>
+        <input type="file" name="dp" id="photo" class="form-control" value=""/><br/>
+        邮箱： <input type="email" name="email" value="<%= user.email %>"/><br/>
+        手机：<input type="tel" name="tel" value="<%= user.tel %>"/><br/>
+        QQ：<input type="text" name="qq" value="<%= user.qq %>"/><br/>
+        微信：<input type="text" name="wechat" value="<%= user.wechat %>"/><br/>
+        <a href="/" type="submit" class="btn btn-default">返回</a>
+        <input type="submit" value="修改"/>
+        </form>
+    </div>
+</div>
+</div>
+
+        </article>

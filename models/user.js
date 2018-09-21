@@ -92,7 +92,7 @@ User.edit = function (name,callback) {
     })
 };
 //将编辑后的内容更新
-User.update = function (name,email,tel,qq,wechat,callback) {
+User.update = function (name,email,tel,qq,wechat,dp,callback) {
     mongodb.open(function (err,db) {
         if(err){
             return callback(err);
@@ -104,13 +104,12 @@ User.update = function (name,email,tel,qq,wechat,callback) {
             }
             collection.update({
                 "name":name
-            },{$set:{email:email,tel:tel,qq:qq,wechat:wechat}},{upsert:true})
+            },{$set:{email:email,tel:tel,qq:qq,wechat:wechat,dp:dp}},{upsert:true})
             collection.findOne({name:name},function (err,user) {
-                mongodb.close();
                 if(err) {
+                    mongodb.close();
                     return callback(err);
                 }
-
                 callback(null,user);
             })
         })

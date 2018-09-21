@@ -119,7 +119,7 @@ module.exports = function(app) {
     app.post('/post', checkLogin);
     app.post('/post',upload.single('photo'),function (req,res) {
         var currentUser = req.session.user,
-            post = new Post(currentUser.name,req.body.title,req.body.post,req.imgUrl,req.body.tags);
+            post = new Post(currentUser.name,req.body.title,req.body.post,req.imgUrl,req.body.tags,req.body.sub);
         post.save(function (err) {
             if(err){
                 req.flash('error',err);
@@ -154,9 +154,9 @@ module.exports = function(app) {
 
 
     //个人中心
-    app.get('/user_center',checkLogin);
-    app.get('/user_center',function (req,res) {
-        res.render('user_center', {
+    app.get('/user_center/profile',checkLogin);
+    app.get('/user_center/profile',function (req,res) {
+        res.render('profile', {
             title: '注册',
             user: req.session.user,
             success: req.flash('success').toString(),
@@ -164,8 +164,8 @@ module.exports = function(app) {
         });
     });
     //编辑个人信息
-    app.post('/user_center',checkLogin);
-    app.post('/user_center',function(req,res){
+    app.post('/user_center/profile',checkLogin);
+    app.post('/user_center/profile',upload.single('dp'),function(req,res){
         var currentUser = req.session.user;
         var name = currentUser.name;
         User.edit(name,function(err,user){
@@ -177,8 +177,12 @@ module.exports = function(app) {
             var tel = req.body.tel;
             var qq = req.body.qq;
             var wechat = req.body.wechat;
-            User.update(name,email,tel,qq,wechat,function(err,user){
-                console.log(email)
+            var dp = req.imgUrl;
+            if(dp == null){
+                dp = currentUser.dp;
+            }
+            User.update(name,email,tel,qq,wechat,dp,function(err,user){
+                console.log(dp)
                 if(err){
                     req.flash('error',err);
                     return res.redirect('back');
@@ -193,7 +197,7 @@ module.exports = function(app) {
 
     //分类页
     //标签对应的文章集合
-    app.get('/:tag',function(req,res){
+    app.get('/tag',function(req,res){
         Post.getTag(req.params.tag,function(err,posts){
             if(err){
                 req.flash('error',err);

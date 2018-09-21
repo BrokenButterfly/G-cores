@@ -16,14 +16,14 @@
                     <%= post.title %>
                 </h1>
                 <p class="story_desc" id="j_desc_preview">
-
+                    <%= post.sub%>
                 </p>
                 <p class="story_info"><%= post.time.minute %></p>
             </div>
         </div>
         <a class="story_user" href="/users/15784">
             <div class="story_user_border">
-                <img src="/uploads/<%= post.imgUrl %>" alt="#" onerror="this.src='uploads/default.jpg'">
+                <img src="/uploads/<%= post.dp %>" alt="#" onerror="this.src='/images/default.jpg'">
             </div>
             <p class="story_user_name">
                 <%= post.name %>
@@ -60,6 +60,24 @@
                      <!--src="https://alioss.g-cores.com/uploads/image/f503a8d7-550e-4d11-a79c-dc2d5ff9c8e1_watermark.png"-->
                      <!--style="display: block;">-->
             <!--</a></div>-->
+    </div>
+    <div class="story_socialActions">
+        <a href="javascript:;" id="j_original_like" class="story_like ">
+            <span class="fa fa-thumbs-up"></span>
+            <strong id="j_original_likesNum">
+                <%= post.pv%>
+            </strong>
+        </a>
+        <a href="javascript:;" id="j_original_mark" class="story_bookmark " title="收藏">
+            <span class="fa fa-star"></span>
+        </a>
+        <a href="javascript:;" id="j_shareToWeibo" class="story_share">
+            <span class="fa fa-weibo"></span>
+        </a>
+        <a href="javascript:;" id="j_shareToWXBtn" data-toggle="popover" title="" data-placement="top" data-container="body" data-original-title="微信扫一扫">
+            <span class="fa fa-weixin"></span>
+        </a>
+
     </div>
 
 </div>

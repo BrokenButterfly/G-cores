@@ -1,0 +1,65 @@
+/*用户中心侧边导航*/
+.fixedSidebar {
+    position: fixed;
+    left: 0;
+    top: 80px;
+    bottom: 0;
+    z-index: 10;
+    width: 270px;
+    background: #eeeef0;
+    color: #888;
+    overflow-y: auto;
+}
+.aus_user {
+    padding: 40px 0 20px;
+    text-align: center;
+}
+.aus_user .aus_user_thumb {
+    background: #aaa;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    width: 100px;
+    height: 100px;
+}
+.aus_user .aus_user_name {
+    margin: 0;
+    font-size: 12px;
+}
+.aus_nav {
+    text-align: center;
+}
+.aus_nav li a {
+    display: block;
+    padding: 10px;
+    color: #888;
+    text-decoration: none;
+}
+.aus_nav li.active a {
+    background: #e0e0e0;
+}
+.aus_container {
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+/*用户中心布局*/
+body.minBody {
+    /*min-width: 800px;*/
+}
+body.body-fixedSidebar{
+    margin-left: 270px;
+}
+@media (max-width: 767px){
+    body.body-fixedSidebar{
+        margin-left: 0!important;
+    }
+    .fixedSidebar{
+        display: none;
+    }
+}

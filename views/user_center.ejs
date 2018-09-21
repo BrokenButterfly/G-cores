@@ -1,13 +1,57 @@
-<%- include header %>
-<form method="post">
-    用户名：
-    <text><%= user.name %></text>
-    <br/>
-    邮箱： <input type="email" name="email" value="<%= user.email %>"/><br/>
-    手机：<input type="tel" name="tel" value="<%= user.tel %>"/><br/>
-    QQ：<input type="text" name="qq" value="<%= user.qq %>"/><br/>
-    微信：<input type="text" name="wechat" value="<%= user.wechat %>"/><br/>
-    <a href="/" type="submit" class="btn btn-default">返回</a>
-    <input type="submit" value="修改"/>
-</form>
-<%- include footer %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Blog</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+    <link rel="stylesheet" href="/stylesheets/user_settings.css"/>
+    <link rel="stylesheet" href="/stylesheets/swiper.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/font-awesome.css"/>
+    <script src="/javascripts/swiper.js"></script>
+    <script src="/javascripts/js.js"></script>
+    <script src="/javascripts/jquery.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+</head>
+<body class="body-fixedSidebar body-fixedNavbar minBody">
+
+<header class="header_nav navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="nav-header">
+            <!--data-* 添加交互-->
+            <!--data-toggle 添加事件
+            data-target 指定事件的目标，在这里是通过id绑定导航栏-->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <!--导航条上面不同的选项-->
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a title="主页" href="/">home</a></li>
+                <% if (user) { %>
+                <li><a title="用户中心" href="/user_center/profile">user_center</a></li>
+                <li><a title="发表" href="/post">post</a></li>
+                <li><a title="登出" href="/logout">logout</a></li>
+                <% } else { %>
+                <li><a title="登录" href="/login">login</a></li>
+                <li><a title="注册" href="/reg">register</a></li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<%- include drawer%>
+<article>
+    <% if (success) { %>
+    <div class="alert_info"><%= success %></div>
+    <% } %>
+    <% if (error) { %>
+    <div class="alert_info"><%= error %></div>
+    <% } %>

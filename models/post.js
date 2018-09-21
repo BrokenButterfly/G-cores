@@ -1,12 +1,13 @@
 //连接数据库
 var mongodb = require('./db');
 var markdown = require('markdown').markdown;
-function Post(name,title,post,imgUrl,tags) {
+function Post(name,title,post,imgUrl,tags,sub) {
     this.name = name;
     this.title = title;
     this.post = post;
     this.imgUrl = imgUrl;
     this.tags = tags;
+    this.sub = sub;
 }
 
 module.exports = Post;
@@ -28,6 +29,7 @@ Post.prototype.save = function (callback) {
         name:this.name,
         time:time,
         title:this.title,
+        sub:this.sub,
         post:this.post,
         // 图片
         imgUrl:this.imgUrl,
@@ -111,6 +113,7 @@ Post.getTag = function(tag,callback){
                 "name":1,
                 "time":1,
                 "title":1,
+                "sub":1,
                 "tags":1,
                 "imgUrl":1
             }).sort({

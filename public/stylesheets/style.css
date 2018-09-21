@@ -86,10 +86,10 @@ p {
 }
 @media (min-width: 768px){
     .focusImgs .swiper-container {
-        height: 300px;
+        height: 300px!important;
     }
     .story_header {
-        height: 350px;
+        height: 350px!important;
     }
     .story_title {
         font-size: 32px;
@@ -103,10 +103,15 @@ p {
         right: 50% !important;
         max-width: 400px!important;
     }
+    .form-horizontal .form_label{
+        text-align: right;
+        margin-bottom: 0;
+        padding-top: 7px;
+    }
 }
 @media (min-width: 992px){
     .focusImgs .swiper-container {
-        height: 420px;
+        height: 420px!important;
     }
     .story_header {
         height: 400px!important;
@@ -444,6 +449,31 @@ p {
     margin: 20px auto;
 }
 
+/*分享&文章点击量*/
+.story_socialActions{
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 0 60px;
+}
+.story_socialActions a{
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #aaa;
+    margin: 0 20px;
+}
+.fa{
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.fa-thumbs-up:before{
+    content: "\f164";
+}
+
 
 
 
@@ -513,7 +543,5 @@ p {
     width: 40px;
     height: 40px;
 }
-
-
 
 /*时间轴*/

@@ -2,13 +2,15 @@
 <form method="post" enctype='multipart/form-data'>
   标题：<br />
   <input type="text" name="title" /><br />
+  摘要：<br />
+  <input type="text" name="sub" /><br />
   正文：<br />
   <textarea name="post" rows="20" cols="100"></textarea><br />
   标签：<br/>
   <select name="tags" id="">
-    <option value ="NEWS">NEWS</option>
-    <option value="MUSIC">MUSIC</option>
-    <option value="GAMES">GAMES</option>
+    <option value ="NEWS">News</option>
+    <option value="MUSIC">Music</option>
+    <option value="GAMES">Game</option>
   </select>
   图片：<br />
   <!--<img src="uploads/<%= user.imgUrl %>" alt="#" onerror="this.src='images/default.jpg'"><br/>-->
