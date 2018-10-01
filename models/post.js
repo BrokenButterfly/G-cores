@@ -31,6 +31,8 @@ Post.prototype.save = function (callback) {
         title:this.title,
         sub:this.sub,
         post:this.post,
+        //用户头像
+        // dp:this.dp,
         // 图片
         imgUrl:this.imgUrl,
         // 标签
@@ -115,7 +117,8 @@ Post.getTag = function(tag,callback){
                 "title":1,
                 "sub":1,
                 "tags":1,
-                "imgUrl":1
+                "imgUrl":1,
+                // "dp":1,
             }).sort({
                 time:-1
             }).toArray(function(err,docs){
@@ -173,7 +176,7 @@ Post.getOne = function(name,minute,title,callback){
                })
                callback(null,doc);
            })
-       })
+       });
    })
 };
 

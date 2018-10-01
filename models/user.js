@@ -115,3 +115,26 @@ User.update = function (name,email,tel,qq,wechat,dp,callback) {
         })
     })
 };
+
+//更新发布文章里的头像
+// User.updateImg = function (name,dp,callback) {
+//     mongodb.open(function(err,db){
+//         if(err){
+//             return callback(err);
+//         }
+//         db.collection('posts',function(err,collection){
+//             if(err){
+//                 mongodb.close();
+//                 return callback(err);
+//             }
+//             collection.update({"name":name},{$set:{dp:dp}},{upsert:true},{multi:true})
+//             collection.find({name:name},function (err,user) {
+//                 if(err) {
+//                     mongodb.close();
+//                     return callback(err);
+//                 }
+//                 callback(null,user);
+//             })
+//         })
+//     })
+// };

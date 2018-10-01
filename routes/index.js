@@ -141,10 +141,22 @@ module.exports = function(app) {
                 req.flash('error','找不到当前文章');
                 return res.redirect('/');
             }
+            // db.posts.aggregate([
+            //     {
+            //         $lookup:
+            //             {
+            //                 from:"users",
+            //                 localField:"name",
+            //                 foreignField:"name",
+            //                 as:"u"
+            //             }
+            //     }
+            // ]);
             res.render('article',{
                 title:req.params.title,
                 user:req.session.user,
                 post:post,
+                // dp:$u.dp,
                 success:req.flash('successs').toString(),
                 error:req.flash('error').toString()
             })
@@ -188,6 +200,13 @@ module.exports = function(app) {
                     return res.redirect('back');
                 }
                 req.session.user = user;
+                // User.updateImg(name,dp,function (err) {
+                //     if(err){
+                //         req.flash('error',err);
+                //         return res.redirect('back');
+                //     }
+                //     console.log(123);
+                // });
                 req.flash('success','修改个人信息成功')
                 return res.redirect('back');
             })
